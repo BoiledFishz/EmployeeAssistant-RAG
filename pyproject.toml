@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "employee-assistant-rag"
+version = "0.1.0"
+description = "LangGraph prototype for an enterprise employee policy assistant"
+requires-python = ">=3.11"
+dependencies = [
+  "langgraph>=1.0,<2",
+]
+
+[project.scripts]
+employee-assistant = "employee_assistant.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
